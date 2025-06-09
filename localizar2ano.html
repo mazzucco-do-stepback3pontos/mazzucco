@@ -15,24 +15,32 @@ var tri3 = [80, 50, 60];
 var tri3 = [80, 50, 70];
 
 
+function selecionar(localizalista){
+ nomeComparado = document.localizalista.NOME.value;
+ turmaComparado = document.localizalista.TURMA.value;
+ let i = 0;
+ document.write("<table border=1>");
 
+    document.write("</table>");
+
+}
 
     </script>
 
     
-    <form NAME= "localizalista">
+    <form NAME="localizalista">
 <table> 
     <tr>
 <td width=40 align="center">Nome</td>
-<td width=40 align="center"> <INPUT NAME="Nome" VALUE=""> </td>
+<td width=40 align="center"> <INPUT NAME="NOME" VALUE=""> </td>
 
     <td width=40 align="center">Turma</td>
-    <td width=40 align="center"> <INPUT NAME="Turma" VALUE=""> </td>
+    <td width=40 align="center"> <INPUT NAME="TURMA" VALUE=""> </td>
  </tr>
 <tr>
-<td width=80 align="center" colspan="4" bgcolor=gold>
-<input type="button" NAME="botao" VALUE="Localizar" 
-onClick="seleciona(localizalista)"> 
+<td width=80 align="center" colspan="4" bgcolor=black>
+<input type="button" NAME="botao" VALUE="Localizar";
+onClick="selecionar(localizalista)"> 
 
 </td>
 
