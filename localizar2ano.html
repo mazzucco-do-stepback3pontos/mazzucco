@@ -1,82 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Localizar</title>
 </head>
 <body>
-    <script>
-var nome = ["Mario", "Eduardo", "Marcelo", ];
-var turma = ["1 ano", "2 ano", "3 ano"];
+<script>
+var nome = ["Ronaldo", "Eduardo", "Marcelo"];
+var turma = ["1° Ano", "2° Ano", "3° Ano"];
 var tri1 = [70, 50, 70];
-var tri3 = [80, 50, 60];
+var tri2 = [80, 50, 60];
 var tri3 = [80, 50, 70];
 
+function seleciona(localizaLista){
+nomeComparado = document.localizaLista.NOME.value;
+turmaComparado = document.localizaLista.TURMA.value;
+let i = 0;
+document.write("<table border=1>");
+for(i = 0; i < nome.length; i++){
 
-function selecionar(localizalista){
- nomeComparado = document.localizalista.NOME.value;
- turmaComparado = document.localizalista.TURMA.value;
- let i = 0;
- document.write("<table border=1>");
+if(nome[i] == nomeComparado){
+document.write("<tr>");
+document.write("<td>");
+document.write("Nome: " + nome[i]);
+document.write("</td>");
 
-    for(i = 0; i < nome.lenght; i++){
+document.write("<td>");
+document.write("Turma: " + turma[i]);
+document.write("</td>");
 
-        if(nome[i] == nomeComparado){
-            document.write("<tr>");
-                document.write("<td>");
-                    document.write("Nome: " + nome[i]);
-                    document.write("</td>");
-                        document.write("</tr>");
-
-
-                        document.write("<tr>");
-                document.write("<td>");
-                    document.write("Turma: " + turma[i]);
-                    document.write("</td>");
-                        document.write("</tr>");
-
-
-    }
-
-    }
-
-    document.write("</table>");
+document.write("</tr>");
+}
 
 }
 
-    </script>
+document.write("</table>");
+}
 
-    
-    <form NAME="localizalista">
-<table> 
-    <tr>
+</script>
+<form name="localizaLista">
+<table class="ab">
+<tr bgcolor="cyan">
 <td width=40 align="center">Nome</td>
-<td width=40 align="center"> <INPUT NAME="NOME" VALUE=""> </td>
-
-    <td width=40 align="center">Turma</td>
-    <td width=40 align="center"> <INPUT NAME="TURMA" VALUE=""> </td>
- </tr>
+<td width=40 align="center"><input NAME="NOME" VALUE=""></td>
+<td width=40 align="center">Turma</td>
+<td width=40 align="center"><input NAME="TURMA" VALUE=""></td>
+</tr>
 <tr>
-<td width=80 align="center" colspan="4" bgcolor=black>
-<input type="button" NAME="botao" VALUE="Localizar";
-onClick="selecionar(localizalista)"> 
-
+<td width=80 align="center" colspan="4" bgcolor="cyan">
+<input type="button" NAME="Botão" Value="Localizar" onclick="seleciona(localizaLista)">
 </td>
-
-
 </tr>
-
-    
-
-</tr>
-
 </table>
-
-
-
-    </form>
-
+</form>
 </body>
 </html>
