@@ -20,7 +20,10 @@ let i = 0;
 document.write("<table border=1>");
 for(i = 0; i < nome.length; i++){
 
-if(nome[i] == nomeComparado){
+if(nome[i].indexOf(nomeComparado) !== -1 ||
+    turma[i].indexOf(turmaComparado) !== -1
+){
+
 document.write("<tr>");
 document.write("<td>");
 document.write("Nome: " + nome[i]);
@@ -41,14 +44,14 @@ document.write("</table>");
 </script>
 <form name="localizaLista">
 <table class="ab">
-<tr bgcolor="cyan">
+<tr bgcolor="">
 <td width=40 align="center">Nome</td>
 <td width=40 align="center"><input NAME="NOME" VALUE=""></td>
 <td width=40 align="center">Turma</td>
 <td width=40 align="center"><input NAME="TURMA" VALUE=""></td>
 </tr>
 <tr>
-<td width=80 align="center" colspan="4" bgcolor="cyan">
+<td width=80 align="center" colspan="4" bgcolor="grey">
 <input type="button" NAME="Botão" Value="Localizar" onclick="seleciona(localizaLista)">
 </td>
 </tr>
